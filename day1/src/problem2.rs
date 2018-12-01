@@ -2,6 +2,7 @@ use std::collections::HashMap;
 use std::collections::VecDeque;
 use std::fs::File;
 use std::io::{BufRead, BufReader};
+use freq::{Freq, Sign};
 
 const STARTING_FREQ: i32 = 0;
 
@@ -58,14 +59,3 @@ fn populate_ring() -> VecDeque<Freq> {
     return ring;
 }
 
-#[derive(Debug)]
-struct Freq {
-    sign: Sign,
-    value: i32,
-}
-
-#[derive(Debug)]
-enum Sign {
-    Plus,
-    Minus,
-}

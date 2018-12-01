@@ -1,5 +1,6 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
+use freq::{Freq, Sign};
 
 const STARTING_FREQ: i32 = 0;
 
@@ -34,16 +35,4 @@ fn parse_line(line: &str) -> Freq {
         },
         _ => panic!("Could not parse sign"),
     }
-}
-
-#[derive(Debug)]
-struct Freq {
-    sign: Sign,
-    value: i32,
-}
-
-#[derive(Debug)]
-enum Sign {
-    Plus,
-    Minus,
 }
