@@ -1,0 +1,8 @@
+mod problem1;
+mod problem2;
+
+fn main() {
+    println!("Advent of code 2018 Day 1 problem 1");
+    problem1::problem1::solve();
+    problem2::problem2::solve();
+}
